@@ -12,14 +12,8 @@
 
 <script>
 export default {
-    data() {
-        return {
-            card: {
-                id: 1,
-                word: 'arigatou',
-                meaning: 'gracias'
-            }
-        }
+    props: {
+        card: Object
     }
 }
 
