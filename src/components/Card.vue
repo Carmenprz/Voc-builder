@@ -5,8 +5,9 @@
                 <h1>{{ card.word }}</h1>
             </div>
             <div>
-                <h2>{{ card.meaning }}</h2>
+                <h2 v-if="!isHidden"> {{ card.meaning }} </h2>
             </div>
+            <button v-on:click="isHidden = !isHidden"> Show meaning </button>
         </section>
         <footer>
             <span>Card number {{ card.id }}</span>
@@ -18,6 +19,11 @@
 export default {
     props: {
         card: Object
+    }, 
+    data() {
+        return {
+            isHidden: true
+        }
     }
 }
 
