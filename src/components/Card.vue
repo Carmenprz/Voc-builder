@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <header>
-        <h1>{{ card.word }}</h1>
-    </header>
+  <div class="card">
     <section>
+        <h1>{{ card.word }}</h1>
         <h2>{{ card.meaning }}</h2>
     </section>
     <footer>
@@ -18,8 +16,8 @@ export default {
         return {
             card: {
                 id: 1,
-                word: 'house',
-                meaning: 'casa'
+                word: 'arigatou',
+                meaning: 'gracias'
             }
         }
     }
@@ -28,5 +26,24 @@ export default {
 </script>
 
 <style>
+.card{
+    width: 25vw;
+    height: 25vw;
+    background-color: rgb(244, 244, 244);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+h2 {
+    color: grey;
+}
+
+footer {
+    font-size: 12px;
+    font-weight: 200;
+}
 
 </style>

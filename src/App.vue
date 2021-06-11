@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <h1>Vocabulary Builder</h1>
     <div id="nav">
-      <router-link to="/">CardList</router-link>
+      <router-link to="/">Your Cards</router-link>
     </div>
     <router-view />
   </div>
