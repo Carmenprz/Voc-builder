@@ -1,0 +1,7 @@
+{
+    "cards":[
+        {"id": 1, "word": "Arigatou", "meaning": "¡Gracias!"}, 
+        {"id": 2, "word": "Itadakimasu", "meaning": "¡Que aproveche!"}, 
+        {"id": 3, "word": "Gomen nasai", "meaning": "Lo siento"}
+    ]
+}
