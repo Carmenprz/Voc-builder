@@ -1,17 +1,19 @@
 <template>
     <div class="card-container">
+        <button v-on:click="showMeaning()">
         <section class="card-body">
             <div>
                 <h1>{{ card.word }}</h1>
             </div>
             <div>
-                <h2 v-if="!isHidden"> {{ card.meaning }} </h2>
+                <h2 v-if="show"> {{ card.meaning }} </h2>
             </div>
-            <button v-on:click="isHidden = !isHidden"> Show meaning </button>
+            <span class="click-message" v-if="!show">Click to see the meaning</span>
         </section>
         <footer>
             <span>Card number {{ card.id }}</span>
         </footer>
+        </button>
     </div>
 </template>
 
@@ -22,7 +24,18 @@ export default {
     }, 
     data() {
         return {
-            isHidden: true
+            show: false
+        }
+    }, 
+    methods: {
+        setShow() { 
+            setTimeout(() => { 
+                this.show = false ;
+            }, 3000);
+        }, 
+        showMeaning() {
+            this.show = true;
+            this.setShow()
         }
     }
 }
@@ -50,6 +63,10 @@ export default {
     margin: 7px;
 }
 
+.click-message {
+    color: rgb(162, 162, 162);
+}
+
 
 h2 {
     color: grey;
@@ -60,6 +77,10 @@ footer {
     position: absolute;
     bottom: 7px;
     left: 62px;
+}
+
+button {
+    all: unset;
 }
 
 </style>
