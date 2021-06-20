@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import CardList from "../views/CardList.vue";
+import CardCreate from "../views/CardCreate.vue"
 
 Vue.use(VueRouter);
 
@@ -10,6 +11,11 @@ const routes = [
     name: "card-list",
     component: CardList,
   },
+  {
+    path: "/card/create",
+    name: "card-create",
+    component: CardCreate,
+  }
 ];
 
 const router = new VueRouter({

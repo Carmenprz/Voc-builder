@@ -12,5 +12,8 @@ const apiClient = axios.create({
 export default {
     getCards(){
         return apiClient.get('/cards')
+    },
+    postCard(card) {
+        return apiClient.post('/cards', card)
     }
 }

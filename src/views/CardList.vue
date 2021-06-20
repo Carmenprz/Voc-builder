@@ -1,17 +1,24 @@
 <template>
-  <div class="cards-container">
-    <Card v-for="card in cards" :key="card.id" :card="card" />
+  <div>
+    <div class="cards-container">
+      <Card v-for="card in cards" :key="card.id" :card="card" />
+    </div>
+    <aside>
+      <ButtonAdd />
+    </aside>
   </div>
 </template>
 
 <script>
 
 import Card from "@/components/Card.vue";
-import CardService from "@/services/CardService.js"
+import ButtonAdd from "@/components/ButtonAdd.vue";
+import CardService from "@/services/CardService.js";
 
 export default {
   components: {
     Card,
+    ButtonAdd
   },
 
   data() { 
