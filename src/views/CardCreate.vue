@@ -53,7 +53,6 @@ export default {
                 this.$router.push({
                     name: 'card-list',
                 })
-                this.event = this.createFreshCard()
             })
             .catch(() => { 
                 console.log('There was a problem')
