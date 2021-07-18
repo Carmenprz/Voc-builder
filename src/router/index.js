@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import CardList from "../views/CardList.vue";
-import CardCreate from "../views/CardCreate.vue"
+import CardCreate from "../views/CardCreate.vue";
+import Albums from "../views/Albums.vue";
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: "/card/create",
     name: "card-create",
     component: CardCreate,
+  },
+  {
+    path: "/albums",
+    name: "albums-list",
+    component: Albums,
   }
 ];
 
