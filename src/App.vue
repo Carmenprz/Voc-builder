@@ -39,6 +39,14 @@ h1 {
     text-align: left;
 }
 
+h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    color: black !important;
+  }
+
 .logo {
     font-size: 24px;
     font-style: normal;
@@ -47,4 +55,5 @@ h1 {
     letter-spacing: 0em;
     text-align: left;
 }
+
 </style>
