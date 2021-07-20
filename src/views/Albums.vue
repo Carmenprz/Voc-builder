@@ -5,16 +5,8 @@
           <h1>my albums</h1>
       </header>
       <section id="albums-container">
-        <div class="album-container">
-            <h2>Japanese</h2>
-            <span class="album-footer">23 cards</span>
-          </div>
-        <div class="album-container">
-            <h2>English</h2>
-            <span class="album-footer">23 cards</span>
-        </div>
-        <div class="album-container">
-            <h2>SOLID Principles</h2>
+        <div class="album-container" v-for="album in albums" :key="album.id">
+            <h2>{{ album.name }}</h2>
             <span class="album-footer">23 cards</span>
         </div>
       </section>
@@ -22,9 +14,25 @@
 </template>
 
 <script>
+import CardService from '../services/CardService';
+
 export default {
-    
+    data() {
+        return {
+            albums: []
+        }
+    }, 
+
+    created() {
+        CardService.getAlbums() 
+            .then(response => {
+                this.albums = response.data
+            })
+            .catch(error => {
+                console.log(error.response)
+            })
     }
+}
 </script>
 
 <style>
