@@ -1,33 +1,27 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import CardList from "../views/CardList.vue";
-import CardCreate from "../views/CardCreate.vue";
-import Albums from "../views/Albums.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import CardCreate from '../views/CardCreate.vue'
+import Albums from '../views/Albums.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    name: "card-list",
-    component: CardList,
+    path: '/',
+    name: 'albums-list',
+    component: Albums,
   },
   {
-    path: "/card/create",
-    name: "card-create",
+    path: '/card/create',
+    name: 'card-create',
     component: CardCreate,
   },
-  {
-    path: "/albums",
-    name: "albums-list",
-    component: Albums,
-  }
-];
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes,
-});
+})
 
-export default router;
+export default router
